@@ -1,6 +1,7 @@
 import type { NextPage, GetStaticPaths, GetStaticProps } from 'next';
-import type { ParsedUrlQuery } from 'querystring';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import type { ParsedUrlQuery } from 'querystring';
 import { API_BASE_URL, POSTER_BASE_URL } from '../../constants/path';
 import { Layout } from '../../components/Layout';
 import { MovieListItem } from '../../types/movie_list';
@@ -17,6 +18,12 @@ interface MoviePageParams extends ParsedUrlQuery {
 }
 
 const MoviePage: NextPage<MoviePageProps> = ({ data }) => {
+    const router = useRouter();
+
+    if (router.isFallback) {
+        return <h4>Loading...</h4>;
+    }
+
     return (
         <Layout title={data.title}>
             <div className={styles.wrapper}>
