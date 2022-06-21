@@ -1,0 +1,35 @@
+.container {
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cardBody {
+    padding: 10px;
+}
+
+.title {
+    margin: 0 0 10px;
+}
+
+.date {
+    opacity: 0.4;
+}
+
+.rating {
+    display: inline-block;
+    background: purple;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-size: 80%;
+    font-weight: bold;
+}

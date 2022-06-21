@@ -1,0 +1,45 @@
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 3fr;
+}
+
+.title {
+    margin: 0;
+}
+
+.tagline {
+    margin: 0;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.year {
+    opacity: 0.4;
+}
+
+.rating {
+    display: inline-block;
+    line-height: 24px;
+    background: purple;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.genre {
+    display: inline-block;
+    line-height: 24px;
+    background: gray;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.description {
+    margin: 30px auto;
+}
